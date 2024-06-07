@@ -19,7 +19,9 @@ class QrGenerator:
             img = img.convert("RGB")
             overlay = ImageDraw.Draw(img)
 
-            font = ImageFont.truetype("/usr/share/fonts/TFF/OpenSans-Regular.ttf", 28)
+            font = ImageFont.truetype(
+                "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf", 28
+            )
             padding = 10
 
             text_bbox = overlay.textbbox((0, 0), text, font=font)
