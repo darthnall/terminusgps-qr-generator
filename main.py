@@ -16,7 +16,7 @@ class TerminusQrGeneratorApp:
         self.app.mount("/media", StaticFiles(directory="media"), name="media")
 
     def create_routes(self) -> None:
-        @self.app.post("/qr/new")
+        @self.app.post("/new")
         async def create_qr(
             imei: Annotated[
                 str,
